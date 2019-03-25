@@ -13,17 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from . import views
-from django.conf.urls.static import static
-from django.conf import settings
 
+from django.urls import path
+from . import views
 # 注意大的网站有很多app
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home),
-        # 网址匹配的话，会使用文件夹下app中的urls.py
-        # path('blog/', blog.views.blog_page),
-    path('blog/', include('blog.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # 实现数据库查看
+    path('', views.blog_page),
+]
