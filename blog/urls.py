@@ -19,4 +19,5 @@ from . import views
 # 注意大的网站有很多app
 urlpatterns = [
     path('', views.blog_page),
+    path('<int:blog_id>/', views.blog_text),
 ]

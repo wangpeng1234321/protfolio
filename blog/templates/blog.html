@@ -75,16 +75,15 @@
     </div>
   </section>
   <div class="container">
-    <h1>blog</h1>
     {% for blog in blogs.all %}
-    <h2><a href="">{{ blog.title }}</a></h2>
-    {{ blog.date }}
-    <br>
-    <img src="{{ blog.image.url }}" height="200">
-    <br>
-    <pre style="width:750px;">{{ blog.short_text }}</pre>
-    <br>
-    {% endfor %}
+<h2><a href="{{ blog.id }}">{{ blog.title }}</a></h2>
+{{ blog.date }}
+<br>
+<img src="{{ blog.image.url }}" height="200">
+<br>
+<pre style="width:750px;">{{ blog.short_text }}</pre>
+<br>
+{% endfor %}
   </div>
 </main>
 
