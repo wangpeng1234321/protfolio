@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 这是我的app
     'gallery.apps.GalleryConfig',
+    'blog',
 ]
 
 MIDDLEWARE = [
