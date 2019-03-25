@@ -10,3 +10,5 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    def short_text(self): # 返回一部分文本
+        return self.text[:60] + '...'
